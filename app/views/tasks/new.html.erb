@@ -1,0 +1,21 @@
+<h1>New task</h1>
+
+<%= form_with model: @task do |form| %>
+  <div class="mb-3">
+    <%= form.label :title, class: "form-label fw-bold" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :details, class: "form-label fw-bold" %>
+    <%= form.text_area :details, class: "form-control" %>
+  </div>
+
+  <%= form.submit class: "btn btn-primary" %>
+<% end %>
+
+<hr>
+
+<%= link_to tasks_path, class: "text-decoration-none" do %>
+  <i class="fa-solid fa-clock-rotate-left"></i> Back to list
+<% end %>
